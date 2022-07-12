@@ -1,0 +1,6 @@
+.btn {
+    border: 2px solid indigo;
+    padding: 9px 16px;
+    background-color: azure;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+$mySize: 100px;
+
+h1{
+    color: darkblue;
+}
+.container{
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item{
+    width: $mySize ;
+    height: $mySize;
+    background-color: aliceblue;
+    border: 1px solid;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 110px;
+    margin: 3px;
+}
