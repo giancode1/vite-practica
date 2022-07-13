@@ -5,7 +5,7 @@ import imageStyles from './image.module.css';
 import img from './web.png';
 import data from './data.json';
 import suma from './suma.ts';
-import {getUsers} from '@services/getUsers'
+import { getUsers } from '@services/getUsers';
 
 //Importación global
 const modules = import.meta.glob('./modules/*.js');
@@ -27,16 +27,15 @@ document.querySelector('#app').innerHTML = `
   <img id="img" />
   <pre>${JSON.stringify(data)}</pre>
 `;
-const boton = document.getElementById('btn')
+const boton = document.getElementById('btn');
 boton.className = buttonStyles.btn;
 
-boton.onclick = async() => {
-  const p = document.getElementById('users')
-  const usuarios = await getUsers()
-  p.innerHTML = JSON.stringify(usuarios[0].name)
-}
+boton.onclick = async () => {
+  const p = document.getElementById('users');
+  const usuarios = await getUsers();
+  p.innerHTML = JSON.stringify(usuarios[0].name);
+};
 
 const imagen = document.getElementById('img');
 imagen.src = img;
 imagen.className = imageStyles.img;
-

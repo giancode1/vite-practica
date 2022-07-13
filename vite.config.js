@@ -33,6 +33,7 @@ export default defineConfig(({ command, mode }) => {
     console.log('Modo Producción');
     return {
       build: {
+        //multi-pagina
         rollupOptions: {
           input: {
             main: resolve(__dirname, 'index.html'),
@@ -40,6 +41,15 @@ export default defineConfig(({ command, mode }) => {
             hola: resolve(__dirname, 'hola', 'index.html'),
           },
         },
+      },
+      resolve: {
+        alias: getAliases(),
+      },
+      //construir librerias, comentar la parte de rollupOptions
+      lib:{
+        entry: resolve(__dirname, 'lib', 'main.js'),
+        name: 'demo',
+        fileNamw: (format) => `demo.${format}.js`
       },
     };
   }
